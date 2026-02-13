@@ -5,4 +5,4 @@ export const SITE_TITLE = "Destra Group";
 export const SITE_DESCRIPTION = "We find answers.";
 
 // Update to your preferred inbox.
-export const CONTACT_EMAIL = "hello@destragroup.com";
+export const CONTACT_EMAIL = "ats@destragroup.com";
