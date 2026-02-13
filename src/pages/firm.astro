@@ -3,65 +3,109 @@ import Layout from '../layouts/BaseLayout.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<Layout title={`Firm — ${SITE_TITLE}`}>
-	<section class="wrap">
-		<p class="eyebrow">Firm</p>
-		<h1>Small team. High standards.</h1>
+<Layout title={`The Partnership — ${SITE_TITLE}`}>
+	<section class="hero">
+		<p class="eyebrow">The Partnership</p>
+		<h1>Alignment is everything.</h1>
 		<p class="lede">
-			{SITE_TITLE} supports investors and operators with clear thinking and fast execution.
-			We do the unglamorous work that makes decisions safe: getting to facts, stress-testing the story,
-			and translating complexity into action.
+			We founded this firm to solve a specific problem: the dilution of expertise in traditional advisory. We don't scale for the sake of volume; we optimize for the success of the principal.
 		</p>
 	</section>
 
-	<div class="grid">
-		<div class="card span-6">
-			<h3>What you get</h3>
-			<ul>
-				<li>Decision memo (not a deck) with the critical answers and risks.</li>
-				<li>Clean models &amp; assumptions you can audit.</li>
-				<li>A focused diligence plan and a practical close roadmap.</li>
-			</ul>
-		</div>
-		<div class="card span-6">
-			<h3>How we work</h3>
-			<ul>
-				<li>Start with the question that matters.</li>
-				<li>Go to primary sources, fast.</li>
-				<li>Separate signal from noise; call the risks explicitly.</li>
-			</ul>
-		</div>
-	</div>
+	<hr />
 
-	<section class="cta">
-		<a class="btn primary" href="/contact">Start a conversation</a>
+	<section class="content-grid">
+		<div class="side-label">
+			<p>Our Philosophy</p>
+		</div>
+		<div class="main-text">
+			<h2>Signal over noise.</h2>
+			<p>
+				Most advisory firms are built to produce "deliverables"—massive slide decks that provide plausible deniability but little direction. We focus on <strong>conviction</strong>. If we don't believe a deal should happen, we say so. Our value is in the clarity of our "No" as much as the confidence of our "Yes."
+			</p>
+		</div>
+	</section>
+
+	<section class="content-grid">
+		<div class="side-label">
+			<p>The Model</p>
+		</div>
+		<div class="main-text">
+			<h2>The partner is the practitioner.</h2>
+			<p>
+				The industry standard is to sell with seniors and execute with juniors. We've inverted this. Every engagement is handled directly by a principal. You gain the benefit of decades of intuition and battle-hardened experience, not a templated approach from a recent MBA graduate.
+			</p>
+		</div>
+	</section>
+
+	<section class="content-grid">
+		<div class="side-label">
+			<p>Selectivity</p>
+		</div>
+		<div class="main-text">
+			<h2>A private mandate.</h2>
+			<p>
+				We operate as a boutique partnership by choice. We only accept a limited number of mandates at any given time to ensure that our focus remains absolute. We do not participate in competitive beauty contests; we work with principals who value discretion and asymmetric insight.
+			</p>
+		</div>
+	</section>
+
+	<section class="cta-section">
+		<p>We work with family offices, private equity principals, and independent operators.</p>
+		<a class="btn primary" href="/contact">Initiate a Conversation</a>
 	</section>
 
 	<style>
-		.wrap {
-			padding: 1rem 0 1.25rem 0;
+		.hero {
+			padding: 1rem 0 2rem 0;
 		}
 		.lede {
-			max-width: 52rem;
-			font-size: 1.05rem;
-			margin-top: 0.6rem;
+			max-width: 40rem;
+			font-size: 1.2rem;
+			line-height: 1.6;
 		}
-		.span-6 {
-			grid-column: span 6;
+		.content-grid {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			gap: 2rem;
+			padding: 3rem 0;
+			border-bottom: 1px solid rgb(var(--border));
 		}
-		ul {
-			margin: 0.75rem 0 0 0;
-			padding-left: 1.1rem;
+		.side-label {
+			grid-column: span 3;
+			text-transform: uppercase;
+			font-size: 0.75rem;
+			letter-spacing: 0.05em;
+			color: rgb(var(--muted));
+			font-weight: 600;
+		}
+		.main-text {
+			grid-column: span 8;
+		}
+		.main-text h2 {
+			margin-top: 0;
+			margin-bottom: 1.5rem;
+			font-size: 1.75rem;
+		}
+		.main-text p {
+			font-size: 1.1rem;
+			color: rgb(var(--foreground));
+			line-height: 1.7;
+		}
+		.cta-section {
+			padding: 4rem 0;
+			text-align: center;
+		}
+		.cta-section p {
+			margin-bottom: 2rem;
+			font-style: italic;
 			color: rgb(var(--muted));
 		}
-		li {
-			margin: 0.35rem 0;
-		}
-		.cta {
-			margin-top: 2rem;
-		}
 		@media (max-width: 960px) {
-			.span-6 {
+			.side-label {
+				grid-column: 1 / -1;
+			}
+			.main-text {
 				grid-column: 1 / -1;
 			}
 		}
