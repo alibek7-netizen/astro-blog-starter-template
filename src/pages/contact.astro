@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE, CONTACT_EMAIL } from '../consts';
+---
+
+<Layout title={`Contact — ${SITE_TITLE}`}>
+	<section class="wrap">
+		<p class="eyebrow">Contact</p>
+		<h1>Start with the question.</h1>
+		<p class="lede">
+			Send a short note: what you're deciding, what you already know, and what you need to be true.
+		</p>
+		<div class="actions">
+			<a class="btn primary" href={`mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent('Intro — ' + SITE_TITLE)}`}
+				>Email us</a
+			>
+			<a class="btn" href="/">Back to home</a>
+		</div>
+		<p class="note">
+			<span class="label">Inbox:</span>
+			<a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+		</p>
+	</section>
+
+	<style>
+		.wrap {
+			padding: 1rem 0 1.25rem 0;
+		}
+		.lede {
+			max-width: 52rem;
+			font-size: 1.05rem;
+			margin-top: 0.6rem;
+		}
+		.actions {
+			margin-top: 1.6rem;
+			display: flex;
+			gap: 0.75rem;
+			flex-wrap: wrap;
+		}
+		.note {
+			margin-top: 1.25rem;
+			font-size: 0.95rem;
+		}
+		.label {
+			color: rgb(var(--muted));
+			margin-right: 0.35rem;
+		}
+	</style>
+</Layout>

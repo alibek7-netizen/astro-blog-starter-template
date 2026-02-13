@@ -1,0 +1,69 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<Layout title={`Firm — ${SITE_TITLE}`}>
+	<section class="wrap">
+		<p class="eyebrow">Firm</p>
+		<h1>Small team. High standards.</h1>
+		<p class="lede">
+			{SITE_TITLE} supports investors and operators with clear thinking and fast execution.
+			We do the unglamorous work that makes decisions safe: getting to facts, stress-testing the story,
+			and translating complexity into action.
+		</p>
+	</section>
+
+	<div class="grid">
+		<div class="card span-6">
+			<h3>What you get</h3>
+			<ul>
+				<li>Decision memo (not a deck) with the critical answers and risks.</li>
+				<li>Clean models &amp; assumptions you can audit.</li>
+				<li>A focused diligence plan and a practical close roadmap.</li>
+			</ul>
+		</div>
+		<div class="card span-6">
+			<h3>How we work</h3>
+			<ul>
+				<li>Start with the question that matters.</li>
+				<li>Go to primary sources, fast.</li>
+				<li>Separate signal from noise; call the risks explicitly.</li>
+			</ul>
+		</div>
+	</div>
+
+	<section class="cta">
+		<a class="btn primary" href="/contact">Start a conversation</a>
+	</section>
+
+	<style>
+		.wrap {
+			padding: 1rem 0 1.25rem 0;
+		}
+		.lede {
+			max-width: 52rem;
+			font-size: 1.05rem;
+			margin-top: 0.6rem;
+		}
+		.span-6 {
+			grid-column: span 6;
+		}
+		ul {
+			margin: 0.75rem 0 0 0;
+			padding-left: 1.1rem;
+			color: rgb(var(--muted));
+		}
+		li {
+			margin: 0.35rem 0;
+		}
+		.cta {
+			margin-top: 2rem;
+		}
+		@media (max-width: 960px) {
+			.span-6 {
+				grid-column: 1 / -1;
+			}
+		}
+	</style>
+</Layout>
