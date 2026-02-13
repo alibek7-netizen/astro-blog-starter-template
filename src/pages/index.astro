@@ -3,16 +3,16 @@ import Layout from '../layouts/BaseLayout.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<Layout title={`${SITE_TITLE} — We find answers.`}>
+<Layout title={`${SITE_TITLE} — Conviction in the complex.`}>
 	<section class="hero">
-		<p class="eyebrow">Independent advisory</p>
-		<h1>We find answers.</h1>
+		<p class="eyebrow">Strategic advocacy for principals</p>
+		<h1>Conviction in the complex.</h1>
 		<p class="lede">
-			Decision-grade diligence, strategy, and execution support for investors and operators.
+			Principal-level intelligence, strategy, and execution support for those managing high-stakes capital. We provide the ground truth required to move.
 		</p>
 		<div class="actions">
-			<a class="btn primary" href="/contact">Contact</a>
-			<a class="btn" href="/firm">Firm</a>
+			<a class="btn primary" href="/contact">Inquire</a>
+			<a class="btn" href="/firm">The Partnership</a>
 		</div>
 	</section>
 
@@ -20,22 +20,22 @@ import { SITE_TITLE } from '../consts';
 
 	<section class="grid">
 		<div class="card span-4">
-			<h3>Due diligence</h3>
-			<p>Commercial, operational, and financial workstreams—fast, defensible, decision-ready.</p>
+			<h3>The Ground Truth</h3>
+			<p>Beyond the data room. Commercial and operational diligence that uncovers what the spreadsheets hide.</p>
 		</div>
 		<div class="card span-4">
-			<h3>Investment advisory</h3>
-			<p>From first look to signing: IC materials, valuation, structuring, and negotiation support.</p>
+			<h3>Principal Advocacy</h3>
+			<p>From first look to final signature. We act as your eyes and ears, optimizing for long-term alpha and structural edge.</p>
 		</div>
 		<div class="card span-4">
-			<h3>Special situations</h3>
-			<p>When the facts are messy: turnaround hypotheses, stakeholder mapping, and path-to-close.</p>
+			<h3>Navigating the Opaque</h3>
+			<p>Special situations, distressed assets, and messy exits. We find the path to close when others see a dead end.</p>
 		</div>
 	</section>
 
 	<section class="bottom">
 		<p class="fine">
-			We operate with discretion. We work in small teams. We optimize for signal—not slide count.
+			We do not use junior associates. We do not value "billable hours." We operate with absolute discretion, optimizing for asymmetric signal—not slide count.
 		</p>
 	</section>
 
@@ -45,8 +45,9 @@ import { SITE_TITLE } from '../consts';
 		}
 		.lede {
 			max-width: 44rem;
-			font-size: 1.1rem;
+			font-size: 1.15rem; /* Slightly larger for authority */
 			margin-top: 0.6rem;
+			line-height: 1.5;
 		}
 		.actions {
 			margin-top: 1.6rem;
@@ -58,12 +59,13 @@ import { SITE_TITLE } from '../consts';
 			grid-column: span 4;
 		}
 		.bottom {
-			margin-top: 2.25rem;
+			margin-top: 3rem; /* Added a bit more breathing room */
 		}
 		.fine {
 			max-width: 52rem;
 			font-size: 0.95rem;
 			color: rgb(var(--muted));
+			font-style: italic; /* Adds a touch of "off the record" vibe */
 		}
 		@media (max-width: 960px) {
 			.span-4 {
